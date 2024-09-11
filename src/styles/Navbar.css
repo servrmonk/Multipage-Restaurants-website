@@ -1,0 +1,94 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #272624;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .leftside {
+  height: 100%;
+}
+
+.navbar .leftside img {
+  width: 70px;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.navbar .rightside {
+  font-size: large;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar .links a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.navbar button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  display: none;
+}
+
+/* Mobile Menu Styling */
+.mobileMenu {
+  position: absolute;
+  top: 100px;
+  /* Position below the navbar */
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.60);
+  /* Transparent grey background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+
+}
+
+.mobileMenu a {
+  color: whitesmoke;
+  /* border: 1px solid red; */
+
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+/* For mobile screens, hide the links and show the IoMdReorder button */
+@media only screen and (max-width: 600px) {
+  .navbar .links {
+    display: none;
+  }
+
+  .navbar .rightside button {
+    display: inherit;
+  }
+
+  .navbar.open .links a {
+    margin: 10px 0;
+  }
+}
+
+/* For medium and larger screens, show the links and hide the button */
+@media only screen and (min-width: 600px) {
+  .navbar .links {
+    display: flex;
+  }
+
+  .navbar .rightside button {
+    display: none;
+  }
+}
